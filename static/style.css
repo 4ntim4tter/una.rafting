@@ -31,37 +31,44 @@ a {
 /* Top - Bar - Styling */
 
 .nav-top-bar {
+    width: fit-content;
     margin: 3rem auto;
     background: var(--primary-blue-color);
     border-radius: 8px;
-    width: fit-content;
     padding: 8px;
+    isolation: isolate;
     anchor-name: --hovered-link;
-    
+
     li:hover {
         anchor-name: --hovered-link;
     }
 
     &::after {
-    content: "";
-    content: "";
-    position: absolute;
-    background-color: var(--primary-lightgray-color);
-    left: anchor(left);
-    right: anchor(right);
-    bottom: anchor(bottom);
-    border-radius: 3px;
-    height: 6px;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background-color: var(--primary-lightgray-color);
+        top: calc(anchor(bottom) - 10px);
+        left: calc(anchor(left) + 0.5rem);
+        right: calc(anchor(right) + 0.5rem);
+        bottom: calc(anchor(bottom) + 5px);
+        border-radius: 3px;
+        transition: all 500ms;
 
-    transition: all 500ms;
+        position-anchor: --hovered-link;
+    }
 
-    position-anchor: --hovered-link;
-}
+    &:has(li:hover)::after {
+        top: anchor(top);
+        left: anchor(left);
+        right: anchor(right);
+        bottom: anchor(bottom);
+    }
+
 }
 
 
 .nav-button {
-    background-color: var(--primary-blue-color);
     padding: 1rem;
     font-size: large;
     border-radius: 4px;
