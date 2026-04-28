@@ -30,7 +30,8 @@ a {
 body {
     background-image: url(../images/una-bg.webp);
     background-attachment: fixed;
-    height: 100vh;
+    height: 100svh;
+    padding-top: 5px;
 }
 
 
@@ -38,7 +39,7 @@ body {
 
 .nav-top-bar {
     width: fit-content;
-    margin: 3rem auto;
+    margin: 1rem auto;
     background: var(--primary-blue-color);
     opacity: 0.8;
     border-radius: 8px;
