@@ -27,6 +27,12 @@ a {
     color: var(--primary-turquoise-color);
 }
 
+body {
+    background-image: url(../images/una-bg.webp);
+    background-attachment: fixed;
+    height: 100vh;
+}
+
 
 /* Top - Bar - Styling */
 
@@ -34,6 +40,7 @@ a {
     width: fit-content;
     margin: 3rem auto;
     background: var(--primary-blue-color);
+    opacity: 0.8;
     border-radius: 8px;
     padding: 8px;
     isolation: isolate;
@@ -48,12 +55,12 @@ a {
         position: absolute;
         z-index: -1;
         background-color: var(--primary-lightgray-color);
-        top: calc(anchor(bottom) - 10px);
+        top: calc(anchor(bottom) - 8px);
         left: calc(anchor(left) + 0.5rem);
         right: calc(anchor(right) + 0.5rem);
         bottom: calc(anchor(bottom) + 5px);
         border-radius: 3px;
-        transition: all 500ms;
+        transition: 500ms linear(0, 0.438 6.3%, 0.769 13.1%, 0.996 20.5%, 1.074 24.5%, 1.13 28.8%, 1.171 35.2%, 1.174 42.6%, 1.152 49.5%, 1.063 67%, 1.026 76.3%, 1.005 86.8%, 1);
 
         position-anchor: --hovered-link;
     }
