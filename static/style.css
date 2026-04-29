@@ -6,6 +6,8 @@
     --primary-turquoise-color: #17B2A6;
     --primary-lightgray-color: #E6E9EB;
     --primary-white-color: #fafafa;
+
+    --background-image: url(../images/una-bg.webp)
 }
 
 html {
@@ -24,22 +26,30 @@ ul {
 
 a {
     text-decoration: none;
-    color: var(--primary-turquoise-color);
+    color: var(--primary-white-color);
 }
 
 body {
-    background-image: url(../images/una-bg.webp);
-    background-attachment: fixed;
     height: 100svh;
-    padding-top: 5px;
+    margin: 0px;
 }
 
 
 /* Top - Bar - Styling */
 
+.bg-image {
+    background-image: var(--background-image);
+    background-attachment: fixed;
+    background-position: 0px -900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
 .nav-top-bar {
     width: fit-content;
-    margin: 1rem auto;
     background: var(--primary-blue-color);
     opacity: 0.8;
     border-radius: 8px;
@@ -51,11 +61,11 @@ body {
         anchor-name: --hovered-link;
     }
 
+    &::before,
     &::after {
         content: "";
+        content: "";
         position: absolute;
-        z-index: -1;
-        background-color: var(--primary-lightgray-color);
         top: calc(anchor(bottom) - 8px);
         left: calc(anchor(left) + 0.5rem);
         right: calc(anchor(right) + 0.5rem);
@@ -66,6 +76,20 @@ body {
         position-anchor: --hovered-link;
     }
 
+    &::before {
+        z-index: -1;
+        background: rgb(0 0 0 / 0.2);
+        backdrop-filter: blur(3px);
+    }
+
+    &::after {
+        z-index: -2;
+        background-image: var(--background-image);
+        background-position: 0px -900px;
+        background-attachment: fixed;
+    }
+
+    &:has(li:hover)::before,
     &:has(li:hover)::after {
         top: anchor(top);
         left: anchor(left);
@@ -95,6 +119,7 @@ body {
 
 .main-title {
     text-align: center;
+    color: var(--primary-blue-color);
 }
 
 .main-text {
