@@ -45,7 +45,6 @@ p {
     height: 100svh;
 }
 
-
 /* Top - Bar - Styling */
 
 .bg-image {
@@ -148,7 +147,6 @@ p {
 }
 
 .main-image {
-    align-items: center;
     align-content: center;
     position: relative;
     background-color: var(--primary-white-color);
@@ -179,9 +177,30 @@ img {
         font-size: small;
     }
 
+    .landing-page {
+        height: auto;
+    }
+
+    .main-content {
+        display:flex;
+        flex-direction: column;
+        height:auto;
+    }
+
     p {
         font-size: x-small;
         padding: 5px;
         clear: both;
+    }
+
+}
+
+@media (max-width: 320px) {
+    .nav-button {
+        font-size: xx-small;
+    }
+
+    p {
+        font-size: x-small;
     }
 }
