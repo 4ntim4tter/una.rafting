@@ -34,9 +34,9 @@ body {
 }
 
 p {
-    font-weight: bolder;
-    font-style: oblique;
-    font-size: large;
+    font-weight: bold;
+    font-style: italic;
+    font-size: medium;
 }
 
 .landing-page {
