@@ -31,18 +31,18 @@ a {
 
 body {
     margin: 0px;
+    display:flex;
+    flex-direction: column;
 }
 
 p {
     font-weight: bold;
     font-style: italic;
-    font-size: clamp(small, large);
+    clear: both;
 }
 
 .landing-page {
     height: 100svh;
-    display: flex;
-    flex-direction: column;
 }
 
 
@@ -180,7 +180,8 @@ img {
     }
 
     p {
-        font-size: small;
+        font-size: x-small;
         padding: 5px;
+        clear: both;
     }
 }
