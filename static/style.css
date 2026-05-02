@@ -14,6 +14,10 @@ html {
     background-color: var(--primary-darkgray-color);
     color: var(--primary-white-color);
     font-family: "Geist", sans-serif;
+    scroll-behavior: smooth;
+    transition-behavior: allow-discrete;
+    container-type: scroll-state;
+    container-name: scroller;
 }
 
 
@@ -41,9 +45,13 @@ p {
     clear: both;
 }
 
-.landing-page {
-    height: 100svh;
+
+img {
+    align-self: center;
+    max-width: 100%;
+    color: linear-gradient(transparent 20%, white 100%)
 }
+
 
 /* Top - Bar - Styling */
 
@@ -66,6 +74,8 @@ p {
     padding: 8px;
     isolation: isolate;
     anchor-name: --hovered-link;
+    view-timeline-name: --top-bar-watched;
+    view-timeline-axis: block;
 
     li:hover {
         anchor-name: --hovered-link;
@@ -147,8 +157,9 @@ p {
 }
 
 .main-image {
-    align-content: center;
+    display: grid;
     position: relative;
+    place-content: center;
     background-color: var(--primary-white-color);
 
     &::before{
@@ -166,11 +177,41 @@ p {
     }
 }
 
+    /* Fixed elements - styling */
 
-img {
-    align-self: center;
-    max-width: 100%;
+.back-button {
+    height: 20px;
+    width: 40px;
+    bottom: 5px;
+    right: 5px;
+    padding-top: 2px;
+
+    position: fixed;
+    z-index: 2;
+    translate: 60px;
+    transition: all 0.4s ease;
+
+    font-size: large;
+    
+    background-color: var(--primary-blue-color);
+    border: 4px outset var(--primary-white-color);
+
+    place-content: center;
+    text-align: center;
+
 }
+
+.back-button:hover{
+    background-color: var(--primary-darkgray-color);
+    border-color: var(--primary-turquoise-color);
+}
+
+@container scroller scroll-state(scrollable: top) {
+    .back-button {
+        translate: 0px;
+    }
+}
+
 
 @media (max-width: 420px) {
     .nav-button{
