@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Secular+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jersey+15&family=Poetsen+One&display=swap");
 
 :root {
     --primary-darkgray-color: #0A0F14;
@@ -13,7 +13,7 @@
 html {
     background-color: var(--primary-darkgray-color);
     color: var(--primary-white-color);
-    font-family: "Geist", sans-serif;
+    font-family: "Poetsen One", sans-serif;
     scroll-behavior: smooth;
     transition-behavior: allow-discrete;
     container-type: scroll-state;
@@ -131,7 +131,7 @@ img {
 
 .main-content {
     display: grid;
-    height: 100svh;
+    /* height: 100svh; */
     grid-template-columns: repeat(
         auto-fit,
         minmax(
@@ -152,7 +152,7 @@ img {
     border-right: 0px;
     text-align: justify;
     align-content: center;
-    padding: 8px;
+    padding: 26px;
 }
 
 .main-image {
@@ -215,7 +215,7 @@ img {
 }
 
 
-@media (max-width: 420px) {
+@media (max-width: 900px) {
     .nav-button{
         font-size: small;
     }
@@ -230,8 +230,13 @@ img {
         height:auto;
     }
 
+    .section-title {
+        place-self: center;
+        font-size: x-large;
+    }
+
     p {
-        font-size: x-small;
+        font-size: small;
         padding: 5px;
         clear: both;
     }
@@ -241,6 +246,10 @@ img {
 @media (max-width: 320px) {
     .nav-button {
         font-size: xx-small;
+    }
+
+    .section-title {
+        font-size: medium;
     }
 
     p {
