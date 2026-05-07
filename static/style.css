@@ -39,9 +39,6 @@ body {
 }
 
 p {
-    font-weight: bold;
-    font-style: italic;
-    clear: both;
     padding: 26px;
 }
 
@@ -150,7 +147,7 @@ img {
 
 .main-text {
     position: relative;
-    text-align: justify;
+    text-align: start;
     align-content: center;
 }
 
@@ -278,9 +275,14 @@ img {
         font-size: x-large;
     }
 
+    .border-div-bottom{
+        display: none;
+    }
+
     p {
         font-size: small;
-        padding: 5px;
+        text-align: justify;
+        padding: 20px;
         clear: both;
     }
 
