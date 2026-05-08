@@ -46,7 +46,6 @@ p {
 img {
     align-self: center;
     max-width: 100%;
-    color: linear-gradient(transparent 20%, white 100%);
 }
 
 
@@ -155,13 +154,10 @@ img {
     display: grid;
     position: relative;
     place-content: center;
-    background-color: var(--primary-white-color);
-
-    border: 4px inset transparent;
 
     margin: 20px;
 
-    transition: all 1.5s ease-in-out;
+    transition: all 1.2s ease-in;
 
     &::before {
         content: "";
@@ -169,10 +165,11 @@ img {
         width: 100%;
         top: 0;
         bottom: 0;
-        background: linear-gradient(var(--primary-blue-color) 0%,
-                transparent 20%,
-                transparent 80%,
-                var(--primary-blue-color)100%);
+        border: 2px solid var(--primary-lightgray-color);
+        background: linear-gradient(var(--primary-darkgray-color) 0%,
+                transparent 10%,
+                transparent 90%,
+                var(--primary-darkgray-color)100%);
 
     }
 
@@ -182,10 +179,11 @@ img {
     transform: scale(1.02);
 }
 
-.border-div-top, .border-div-bottom {
+.border-div-top,
+.border-div-bottom {
     min-height: 8px;
     min-width: 100%;
-    background-image: linear-gradient(45deg, transparent 5%, var(--primary-lightgray-color) 5%, var(--primary-turquoise-color), var(--primary-lightgray-color) 95%, transparent 95%);
+    background-image: linear-gradient(60deg, transparent -5%, var(--primary-lightgray-color) 5%, var(--primary-turquoise-color), var(--primary-lightgray-color) 95%, transparent 105%);
 }
 
 .border-div-top {
@@ -259,7 +257,7 @@ img {
         font-size: x-large;
     }
 
-    .border-div-bottom{
+    .border-div-bottom {
         display: none;
     }
 
