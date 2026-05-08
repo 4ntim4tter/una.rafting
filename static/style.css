@@ -157,17 +157,11 @@ img {
     place-content: center;
     background-color: var(--primary-white-color);
 
-    border: 2px solid var(--primary-lightgray-color);
+    border: 4px inset transparent;
 
     margin: 20px;
 
-    transform: rotate(-1deg);
-
-    border-top-left-radius: 37px 140px;
-    border-top-right-radius: 23px 130px;
-    border-bottom-left-radius: 110px 19px;
-    border-bottom-right-radius: 120px 24px;
-    transition: all 0.2s ease-in-out;
+    transition: all 1.5s ease-in-out;
 
     &::before {
         content: "";
@@ -175,13 +169,9 @@ img {
         width: 100%;
         top: 0;
         bottom: 0;
-        border-top-left-radius: 37px 140px;
-        border-top-right-radius: 23px 130px;
-        border-bottom-left-radius: 110px 19px;
-        border-bottom-right-radius: 120px 24px;
         background: linear-gradient(var(--primary-blue-color) 0%,
-                transparent 40%,
-                transparent 60%,
+                transparent 20%,
+                transparent 80%,
                 var(--primary-blue-color)100%);
 
     }
@@ -189,20 +179,13 @@ img {
 }
 
 .main-image:hover {
-    transform: translateY(-10px) rotate(1deg);
-}
-
-.child-image {
-    border-top-left-radius: 37px 140px;
-    border-top-right-radius: 23px 130px;
-    border-bottom-left-radius: 110px 19px;
-    border-bottom-right-radius: 120px 24px;
+    transform: scale(1.02);
 }
 
 .border-div-top, .border-div-bottom {
     min-height: 8px;
     min-width: 100%;
-    background-image: linear-gradient(45deg, transparent 10%, var(--primary-lightgray-color) 10%, var(--primary-turquoise-color), var(--primary-lightgray-color) 90%, transparent 90%);
+    background-image: linear-gradient(45deg, transparent 5%, var(--primary-lightgray-color) 5%, var(--primary-turquoise-color), var(--primary-lightgray-color) 95%, transparent 95%);
 }
 
 .border-div-top {
@@ -222,7 +205,8 @@ img {
     width: 0px;
     bottom: 5px;
     right: 5px;
-    padding-top: 2px;
+    padding: 5px;
+    padding-bottom: 10px;
 
     position: fixed;
     z-index: 2;
@@ -232,7 +216,7 @@ img {
     font-size: large;
 
     background-color: var(--primary-blue-color);
-    border: 2px solid var(--primary-white-color);
+    border: 2px inset var(--primary-white-color);
     border-radius: 6px;
 
     place-content: center;
