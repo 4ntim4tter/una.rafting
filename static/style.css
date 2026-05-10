@@ -183,7 +183,7 @@ img {
 .border-div-bottom {
     min-height: 8px;
     min-width: 100%;
-    background-image: linear-gradient(60deg, transparent -5%, var(--primary-lightgray-color) 5%, var(--primary-turquoise-color), var(--primary-lightgray-color) 95%, transparent 105%);
+    background-image: linear-gradient(70deg, transparent 5%, var(--primary-lightgray-color) 5%, var(--primary-turquoise-color), var(--primary-lightgray-color) 95%, transparent 95%);
 }
 
 .border-div-top {
@@ -252,8 +252,9 @@ img {
     }
 
     .main-title {
+        padding-top: 22px;
         padding-left: 0px;
-        place-self: center;
+        text-align: center;
         font-size: x-large;
     }
 
