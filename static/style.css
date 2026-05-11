@@ -39,13 +39,16 @@ body {
 }
 
 p {
-    padding: 26px;
+    padding: 40px;
 }
 
 
 img {
+    display: block;
     align-self: center;
     max-width: 100%;
+    outline: 5px solid var(--primary-darkgray-color);
+    outline-offset: -5px;
 }
 
 
@@ -156,6 +159,7 @@ img {
     place-content: center;
 
     margin: 20px;
+    padding-right: 10px;
 
     transition: all 1.2s ease-in;
 
@@ -163,20 +167,18 @@ img {
         content: "";
         position: absolute;
         width: 100%;
-        top: 0;
-        bottom: 0;
-        border: 2px solid var(--primary-lightgray-color);
-        background: linear-gradient(var(--primary-darkgray-color) 0%,
-                transparent 10%,
-                transparent 90%,
-                var(--primary-darkgray-color)100%);
+        height: 100%;
+        background: radial-gradient(
+                transparent 50%,
+                var(--primary-darkgray-color)60%);
+        transform: scale(1.05);
 
     }
 
 }
 
 .main-image:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
 }
 
 .border-div-top,
