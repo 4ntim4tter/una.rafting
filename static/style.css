@@ -149,6 +149,10 @@ img {
     color: var(--primary-turquoise-color);
 }
 
+.text-title-placement {
+    margin: 40px;
+}
+
 .main-title {
     padding-left: 50px;
 }
@@ -252,7 +256,7 @@ img {
     }
 
     .main-title {
-        padding-top: 22px;
+        padding-top: 10px;
         padding-left: 0px;
         text-align: center;
         font-size: x-large;
