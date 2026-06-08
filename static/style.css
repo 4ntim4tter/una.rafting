@@ -40,6 +40,7 @@ body {
 
 p {
     padding: 30px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 
@@ -65,6 +66,7 @@ img {
 
 .nav-top-bar {
     width: fit-content;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     background: var(--primary-blue-color);
     opacity: 0.8;
     border-radius: 8px;
@@ -130,6 +132,12 @@ img {
 .main-content {
     display: grid;
     margin-bottom: 10px;
+    background: linear-gradient(to right,
+        var(--primary-darkgray-color), 
+        var(--primary-blue-color),
+        var(--primary-turquoise-color),
+        var(--primary-white-color)
+        );
     /* height: 100svh; */
     grid-template-columns: repeat(auto-fit,
             minmax(min(16rem, 100%), 1fr));
@@ -147,6 +155,7 @@ img {
 .page-title {
     text-align: center;
     color: var(--primary-turquoise-color);
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .text-title-placement {
@@ -155,6 +164,7 @@ img {
 
 .main-title {
     padding-left: 50px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 
@@ -178,7 +188,7 @@ img {
 .border-div-bottom {
     min-height: 8px;
     min-width: 100%;
-    background-image: linear-gradient(70deg, transparent 5%, var(--primary-lightgray-color) 5%, var(--primary-turquoise-color), var(--primary-lightgray-color) 95%, transparent 95%);
+    background-image: linear-gradient(70deg, transparent 5%, var(--primary-lightgray-color) 5% 75%, var(--primary-turquoise-color) 95%, transparent 95%);
 }
 
 .border-div-top {
