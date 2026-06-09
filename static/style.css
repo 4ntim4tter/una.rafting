@@ -59,6 +59,7 @@ img {
     background-position: 0px -900px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -131,7 +132,6 @@ img {
 
 .main-content {
     display: grid;
-    margin-bottom: 10px;
     background: linear-gradient(to right,
         var(--primary-darkgray-color), 
         var(--primary-blue-color),
@@ -143,8 +143,8 @@ img {
             minmax(min(16rem, 100%), 1fr));
 
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease-out;
+    transform: translateX(100px);
+    transition: all 1.5s ease-out;
 }
 
 .main-content.is_visible {
