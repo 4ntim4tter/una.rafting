@@ -161,7 +161,7 @@
                 entry.target.classList.add('is_visible');
             }
         });
-    }, { threshold: 0.1 }); // Triggers when 10% of the element is visible
+    }, { threshold: 0.1 });
 
     document.querySelectorAll('.main-content').forEach((el) => observer.observe(el));
 

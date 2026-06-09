@@ -149,7 +149,7 @@ img {
 
 .main-content.is_visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0px);
 }
 
 .page-title {
