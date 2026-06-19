@@ -133,25 +133,25 @@ img {
 
 .main-content {
     display: grid;
+    height: 100svh;
     background: linear-gradient(to right,
-        var(--primary-darkgray-color), 
-        var(--primary-blue-color),
-        var(--primary-turquoise-color),
-        var(--primary-white-color)
-        );
+            var(--primary-darkgray-color),
+            var(--primary-blue-color),
+            var(--primary-turquoise-color),
+            var(--primary-white-color));
     /* height: 100svh; */
     grid-template-columns: repeat(auto-fit,
             minmax(min(16rem, 100%), 1fr));
 
-    opacity: 0;
+    /*     opacity: 0;
     transform: translateX(100px);
-    transition: all 1.5s ease-out;
+    transition: all 1.5s ease-out; */
 }
 
-.main-content.is_visible {
+/* .main-content.is_visible {
     opacity: 1;
     transform: translateX(0px);
-}
+} */
 
 .page-title {
     text-align: center;
@@ -180,8 +180,18 @@ img {
     position: relative;
     place-content: center;
     width: 100%;
-    mask-image: linear-gradient(to left, transparent 10%, black 15%, black 85%, transparent 90%), 
-    linear-gradient(to bottom, transparent 10%, black 15%, black 85%, transparent 90%);
+    mask-image: linear-gradient(to left, transparent 10%, black 15%, black 85%, transparent 90%),
+        linear-gradient(to bottom, transparent 10%, black 15%, black 85%, transparent 90%);
+    mask-composite: intersect;
+}
+
+.gallery-image {
+    display: grid;
+    position: relative;
+    place-content: center;
+    width: 100%;
+    mask-image: linear-gradient(to left, transparent 25%, black 31%, black 69%, transparent 75%),
+        linear-gradient(to bottom, transparent 10%, black 15%, black 85%, transparent 90%);
     mask-composite: intersect;
 }
 
@@ -193,12 +203,11 @@ img {
 }
 
 .border-div-top {
-    position: absolute;
     top: 5px;
 }
 
 .border-div-bottom {
-    position: absolute;
+
     bottom: 5px;
 }
 
@@ -266,6 +275,18 @@ img {
 
     .border-div-bottom {
         display: none;
+    }
+
+    .main-image {
+        mask-image: linear-gradient(to left, transparent 10%, black 15%, black 85%, transparent 90%),
+            linear-gradient(to bottom, transparent 10%, black 15%, black 85%, transparent 90%);
+        mask-composite: intersect;
+    }
+
+    .gallery-image {
+        mask-image: linear-gradient(to left, transparent 10%, black 15%, black 85%, transparent 90%),
+            linear-gradient(to bottom, transparent 10%, black 15%, black 85%, transparent 90%);
+        mask-composite: intersect;
     }
 
     p {
