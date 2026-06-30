@@ -163,6 +163,11 @@ img {
     margin: 40px;
 }
 
+.background-animation {
+    background-image: url("../images/skok.webp");
+    background-size: cover;
+}
+
 .main-title {
     padding-left: 50px;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
